@@ -8,7 +8,7 @@ const shopRouter = require("./routes/shop.js");
 // MIDDLEWARE
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(express.static(path.join(__dirname, "public")));
 app.use("/admin", adminRouter);
 app.use(shopRouter);
 
